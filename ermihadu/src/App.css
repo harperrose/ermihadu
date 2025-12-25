@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: Maitree, serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title h1 {
+  font-family: "Inknut Antiqua";
+  font-size: 35pt;
+  padding: 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title span {
+  text-decoration: underline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.filters {
   display: flex;
-  flex-direction: column;
+  gap: 16px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 40px;
+  padding: 0 24px;
 }
 
-.App-link {
-  color: #61dafb;
+.add-btn {
+  margin-left: auto;
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.items {
+  padding: 24px;
+}
+
+.item {
+  margin-bottom: 32px;
+}
+
+.image-wrap img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.image-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+}
+
+.image-scroll img {
+  width: 90vw;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  height: 32px;
+}
+
+.person {
+  width: 20%;
+}
+
+.title-text {
+  width: 60%;
+  font-family: "Inknut Antiqua";
+  font-size: 16pt;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item.open .title-text {
+  white-space: normal;
+}
+
+button {
+  font-family: Maitree;
+}
+
+.details {
+  margin-top: 12px;
+}
+
+.description {
+  font-size: 12pt;
+}
+
+.waves {
+  height: 40px;
+  background: repeating-linear-gradient(
+    90deg,
+    black 0 2px,
+    transparent 2px 4px
+  );
+  cursor: pointer;
+}
+
+.transcript {
+  font-size: 16pt;
+}
+
+.uploaded {
+  margin-top: 8px;
+  opacity: 0.6;
+}
+
+.item:not(.open) button {
+  color: #555;
 }
